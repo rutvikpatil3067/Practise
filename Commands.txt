@@ -1,0 +1,29 @@
+1.Make folder StudentMVC
+2.in that folder - dotnet new sln
+3.dotnet new classlib -o BLL
+4.dotnet new classlib -o BOL
+5.dotnet new classlib -o DAL
+6.dotnet new mvc -o StudentApp
+7.dotnet sln add ,/StudentApp/StudentApp.csproj
+8.cd StudentApp
+9.dotnet add reference ../BLL/BLL.csproj
+10.dotnet add reference ../BOL/BOL.csproj
+11.dotnet add reference ../DAL/DAL.csproj
+12.cd DAL
+13.dotnet add reference ../BOL/BOL.csproj
+14.dotnet add package MySql.Data
+15.cd..
+16.cd BLL
+17.dotnet add reference ../BOL/BOL.csproj
+18.dotnet add reference ../DAL/DAL.csproj
+19.cd..
+20.dotnet sln add ./BLL/BLL.csproj
+21.dotnet sln add ./BOL/BOL.csproj
+22.dotnet sln add ./DAl/DAl.csproj
+23.now open in vs code 
+24.Open BOL and write classlib
+25.write controller
+26.write class in BLL
+27.write db manager in DAL
+
+mysql command== mysql --host=192.168.10.150 --port=3306 --user=dac32 --password=welcome
